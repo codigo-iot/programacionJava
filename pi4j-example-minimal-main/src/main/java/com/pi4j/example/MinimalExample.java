@@ -43,7 +43,7 @@ import com.pi4j.util.Console;
 public class MinimalExample {
 
     private static final int PIN_BUTTON = 24; // PIN 18 = BCM 24
-    private static final int PIN_LED = 22; // PIN 15 = BCM 22
+    private static final int PIN_LED = 27; // PIN 15 = BCM 22
 
     private static int pressCount = 0;
 
