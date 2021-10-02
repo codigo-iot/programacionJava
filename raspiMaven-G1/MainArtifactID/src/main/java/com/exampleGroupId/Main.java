@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pi4j;
+package com.exampleGroupId;
 
 import com.pi4j.Pi4J;
 import com.pi4j.context.Context;
@@ -21,15 +21,19 @@ public class Main {
 
     private static final int PIN_LED = 22; // PIN 15 = BCM 22
     private static final Console console = new Console();
+    //private static final Console miConsola = new Console ();
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        console.box("Hello Rasbian world !");
+        console.box("Hello RaspberryPi world !");
+        //miConsola.box("Hello MiConsola");
         Context pi4j = null;
+        //Context hugoMotores = null;
         try {
             pi4j = Pi4J.newAutoContext();
+            //hugoMotores = Pi4J.newAutoContext();
             new Main().run(pi4j);
         } catch (InvocationTargetException e) {
             console.println("Error: " + e.getTargetException().getMessage());
